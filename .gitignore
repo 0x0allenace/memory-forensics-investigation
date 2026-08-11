@@ -1,0 +1,37 @@
+# Memory dumps / forensic images
+*.dmp
+*.raw
+*.mem
+*.vmem
+*.bin
+*.img
+*.E01
+*.001
+
+# Malware samples
+*.exe
+*.dll
+*.scr
+*.msi
+*.js
+*.vbs
+*.ps1
+
+# Extracted artifacts
+dump/
+dumps/
+malware/
+samples/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
