@@ -109,7 +109,7 @@ No individual artifact was treated as conclusive in isolation.
 
 The convergence of multiple independent observations increased the confidence that dfsvc.exe represented a high-priority process for further incident-response investigation.
 
-⸻
+---
 
 Recommended Next Steps:
 
@@ -124,7 +124,7 @@ Recommended Next Steps:
 9. Investigate possible persistence mechanisms.
 10. Determine the initial execution vector.
 
-⸻
+---
 
 # Evidence Locations
 

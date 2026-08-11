@@ -66,7 +66,7 @@ Detection / Response Opportunity
 ```
 The objective is not simply to demonstrate individual security tools, but to demonstrate how security telemetry and forensic artifacts can be correlated to answer investigative questions and produce defensible findings.
 
-⸻
+---
 
 Skills Demonstrated
 
@@ -86,10 +86,10 @@ The investigations demonstrate practical experience in:
 * MITRE ATT&CK Mapping
 * Incident Response
 
-⸻
+---
 
 # Repository Organization
-
+```text
 reports/
 │
 ├── README.md
@@ -100,33 +100,12 @@ reports/
     ├── executive-summary.md
     ├── analyst-notebook.md
     ├── execution-timeline.md
-    ├── findings.md
-    │
-    ├── iocs/
-    │   ├── host-iocs.csv
-    │   └── network-iocs.csv
-    │
-    ├── volatility/
-    │   ├── malfind.txt
-    │   ├── pstree.txt
-    │   ├── pslist.txt
-    │   ├── dlllist.txt
-    │   └── notes.md
-    │
-    ├── memprocfs/
-    │   ├── forensic-findevil.txt
-    │   ├── process-tree.txt
-    │   ├── netstat.txt
-    │   └── notes.md
-    │
-    ├── evidence/
-    │   ├── memory-image.sha256.txt
-    │   └── evidence-manifest.md
     │
     └── screenshots/
         ├── volatility/
+        └── procmon/
         └── memprocfs/
-
+```
 
 # Evidence Handling
 
@@ -141,7 +120,7 @@ Where applicable, investigation artifacts include:
 
 Sensitive or unnecessary malware binaries and other potentially dangerous artifacts should not be committed to the repository unless there is a specific and controlled reason to do so.
 
-⸻
+---
 
 Disclaimer
 
@@ -149,7 +128,7 @@ These investigations were conducted in controlled laboratory environments for ed
 
 The documented findings should be interpreted within the context of the associated laboratory environment and available evidence.
 
-⸻
+---
 
 Author
 

@@ -116,7 +116,7 @@ Analytical Assessment
 
 This approach prevented individual artifacts from being prematurely classified as malicious without additional supporting evidence.
 
-⸻
+---
 
 # 6. Process Investigation
 
@@ -144,7 +144,7 @@ Supporting evidence:
 
 Analyst Note: Process enumeration establishes the initial process population but does not by itself establish maliciousness. Suspicion was determined through subsequent memory, process, module, and network analysis.
 
-⸻
+---
 
 # 7. Process Relationship Analysis
 
@@ -170,7 +170,7 @@ Supporting screenshots:
 
 Analyst Assessment: The absence of the parent process from the memory process tree does not independently indicate malicious behavior. However, correlation with Procmon provided additional evidence for reconstructing the execution chain.
 
-⸻
+---
 
 # 8. Suspicious Memory Analysis
 
@@ -200,7 +200,7 @@ The presence of multiple suspicious executable/writable memory regions within df
 
 The process was therefore examined through additional memory and module analysis rather than treating the malfind result as a standalone detection.
 
-⸻
+---
 
 # 9. Target Process Investigation
 
@@ -267,7 +267,7 @@ Their significance comes from their presence within the broader context of a pro
 
 Analyst Assessment: DLL presence alone is insufficient to establish compromise. The modules were therefore evaluated as supporting context rather than primary evidence of malicious activity.
 
-⸻
+---
 
 # 11. MemProcFS Investigation
 
@@ -275,7 +275,7 @@ MemProcFS was used as an independent analysis framework to provide an additional
 
 The purpose of using a second framework was to determine whether observations made through Volatility could be corroborated through an alternative representation of the same memory evidence.
 
-⸻
+---
 
 # 12. MemProcFS FindEvil Analysis
 
@@ -328,7 +328,7 @@ Supporting screenshot:
 
 ![MemProcFS FindEvil](screenshots/memprocfs//MemProcFS-findevil-suspicious-memory.png)
 
-⸻
+---
 
 # 14. MemProcFS Process Analysis
 
@@ -341,7 +341,7 @@ Supporting screenshot:
 
 ![MemProcFS Process Tree](screenshots/memprocfs//memprocfs-process-tree.png)
 
-⸻
+---
 
 # 15. Network Artifact Investigation
 
@@ -379,7 +379,7 @@ screenshots/memprocfs/memprocfs-netstat-network-artifacts.png
 
 Analyst Assessment: Network artifacts increased the investigative significance of dfsvc.exe, particularly when considered alongside suspicious memory regions and PE modification evidence.
 
-⸻
+---
 
 # 16. Evidence Correlation
 
@@ -424,7 +424,7 @@ Evidence:
 
 Confidence: High
 
-⸻
+---
 
 Finding 2 — Cross-Tool Confirmation
 
@@ -435,7 +435,7 @@ The suspicious process was identified through both Volatility and MemProcFS anal
 
 Confidence: High
 
-⸻
+---
 
 Finding 3 — Modified PE Structure
 
@@ -449,7 +449,7 @@ Confidence: Medium–High
 
 This finding supports the broader compromise hypothesis but does not independently identify the exact modification mechanism.
 
-⸻
+---
 
 Finding 4 — Suspicious Network Artifact
 
@@ -461,7 +461,7 @@ Confidence: Medium
 
 Additional packet capture, DNS telemetry, firewall logs, or EDR telemetry would be required to conclusively establish C2 communication.
 
-⸻
+---
 
 # 18. Indicators of Compromise
 
@@ -488,7 +488,7 @@ Potential indicators include:
 
 Only artifacts supported by the available evidence should be classified as IOCs.
 
-⸻
+---
 
 # 19. MITRE ATT&CK Considerations
 
@@ -504,7 +504,7 @@ Additional technique mappings should be established only after confirming the sp
 
 For example, the current evidence does not by itself establish a specific process-injection sub-technique such as Process Hollowing or Portable Executable Injection.
 
-⸻
+---
 
 # 20. Detection and Response Opportunities
 
@@ -548,7 +548,7 @@ Several limitations should be considered when interpreting the findings.
 
 These limitations were considered when assigning confidence to the findings.
 
-⸻
+---
 
 # 22. Analyst Assessment
 
@@ -569,7 +569,7 @@ The assessment is instead based on the correlation of multiple independent obser
 
 Overall Assessment: The evidence is consistent with compromise of `dfsvc.exe` and potential in-memory execution or process manipulation. Further analysis of the dumped process, endpoint telemetry, and network evidence would be required to determine the precise injection mechanism, malware family, persistence mechanism, and external infrastructure involved.
 
-⸻
+---
 
 # 23. Recommended Next Steps
 
